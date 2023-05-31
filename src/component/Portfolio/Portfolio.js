@@ -16,7 +16,7 @@ const Portfolio = ({img1,img2,img3,img4,img5,img6,img7,img8,img9,img10}) => {
     }
     return (
         <section className='portfolio' id='portfolio'>
-            <h2>My <span>Portfolio</span></h2>
+            <h2>Mon <span>Portfolio</span></h2>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
