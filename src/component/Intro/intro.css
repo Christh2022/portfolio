@@ -1,0 +1,505 @@
+section{
+    min-height: 100vh;
+    padding: 0rem 9% 2rem;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    padding: 0 2%;
+    overflow-x: visible;
+    min-height: 100vh;
+}
+
+.home-content{
+    max-width: 65%;
+}
+
+.home-content h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    animation: animation3 .5s ease .6s 1 normal none;
+}
+
+@keyframes animation3 {
+    0% {
+      opacity: 0; 
+      transform: rotate(-540deg) scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+    }
+    
+}
+
+.home-content.intro,
+.btn-box.intro,
+.animation_earth.intro,
+.home-sci.intro,
+.home-content p.p_intro{
+    opacity: 0;
+}
+
+.home-content .text-nimate{
+    position: relative;
+    width: 44.83rem;
+    animation: animation3 .5s ease .6s 1 normal none;
+}
+
+.home-content .text-nimate h3{
+    position: relative;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .7px var(--main-color);
+    background-image: linear-gradient(var(--main-color), var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-position: -44.5rem 0;
+    animation: animebg 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.home-content .text-nimate h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    z-index: -1;
+    animation: animecursor 6s linear infinite;
+    animation-delay: 2s;
+}
+
+
+.home-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem;
+    text-align: justify;
+    animation: animationp .5s ease .9s 1 normal none;
+}
+
+@keyframes animationp {
+    0% {
+      transform: translateX(-500px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+  }
+
+.btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+    animation: animationbtnbox .5s ease 1.3s 1 normal none;
+}
+
+@keyframes animationbtnbox {
+    0% {
+      transform: scale(0.5);
+      transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 50% 100%;
+      opacity: 1;
+    }
+    
+  }
+
+.btn-box .btn{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+    height: 100%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .5s;
+}
+
+.btn-box .btn:nth-child(2){
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-box .btn:nth-child(2)::before{
+    background: var(--main-color);
+}
+
+.btn-box .btn:nth-child(2):hover{
+    color: var(--bg-color);
+}
+
+.btn-box .btn:hover{
+    color: var(--main-color);
+}
+
+.btn-box .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: width .5s ease;
+}
+
+.btn-box .btn:hover::before{
+    width: 100%;
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 4rem;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    animation: animationicons .5s ease 1.5s 1 normal none;
+}
+
+@keyframes animationicons {
+  0% {
+    opacity: 0.8;transform: scale(0.65);
+  }
+  80% {
+    opacity: 0.5;transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;transform: scale(1);
+  }
+  
+}
+
+.home-sci span{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    z-index: 1;
+    overflow: hidden;
+    color: var(--bg-color);
+    background: var(--main-color);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.home-sci span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background: var(--bg-color);
+    transition: width .5s ease;
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+.home-sci span:hover::before{
+    width: 100%;
+}
+
+.home-sci span:nth-child(2), 
+.home-sci span:nth-child(3){
+    background: transparent;
+    color: var(--main-color);
+}
+
+.home-sci span:nth-child(2):hover, 
+.home-sci span:nth-child(3):hover{
+    color: var(--bg-color);
+}
+
+.home-sci span:nth-child(2)::before, 
+.home-sci span:nth-child(3)::before{
+    background: var(--main-color);
+}
+
+.home-sci span:hover{
+    color: var(--main-color);
+}
+
+.animation_earth{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: animationbtn .5s ease 1.3s 1 normal none;
+}
+
+@keyframes animationbtn {
+    0% {
+      transform: translateY(520px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+}
+
+.animation_earth .container{
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+}
+
+.animation_earth .sun{
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+}
+
+.earth, .moon{
+    position: absolute;
+    border-style: solid;
+    border-color: var(--main-color) transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+
+.earth{
+    top: 5em;
+    left: 5em;
+    width: 30em;
+    height: 30em;
+    animation: orbite 5.5s linear infinite;
+}
+
+.moon{
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em;
+    border-color: silver transparent transparent transparent;
+    animation: orbite 5.5s linear infinite;
+}
+
+.earth::before, .moon::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.earth::before{
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: var(--main-color);
+}
+
+.moon::before{
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: silver;
+}
+
+@keyframes orbite {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .animation_earth .container{
+        transform: scale(0.7);
+    }
+
+    .home-content h1{
+        font-size: 3.8rem;
+    }
+
+}
+
+@media (max-width: 965px) {
+    .home-content{
+        max-width: 100%;
+    }
+
+    .home-content h1{
+        font-size: 3.5rem;
+    }
+
+    .home-content .text-nimate{
+        width: 42rem
+    }
+
+    .home-content .text-nimate h3{
+        font-size: 3rem;
+        background-position: -41.5rem 0;
+        animation: animebgmobile 6s linear infinite;
+        animation-delay: 2s;
+    }
+
+    @keyframes animebgmobile {
+        0%,10%,100%{
+            background-position: -42rem 0;
+        }
+    
+        65%,85%{
+            background-position: 0rem 0;
+        }
+    }
+}
+
+@media (max-width: 764px) {
+    .home-content h1{
+        font-size: 2.7rem;
+    }
+    .animation_earth .container{
+        transform: scale(0.4);
+    }
+
+    .home-content .text-nimate{
+        width: 32.2rem
+    }
+
+    .home-content .text-nimate h3{
+        font-size: 2.3rem;
+        background-position: -32.2rem 0;
+        animation: animebgmobile_two 6s linear infinite;
+        animation-delay: 2s;
+    }
+
+    @keyframes animebgmobile_two {
+        0%,10%,100%{
+            background-position: -32.2rem 0;
+        }
+    
+        65%,85%{
+            background-position: 0rem 0;
+        }
+    }
+
+    .home-content p{
+        font-size: 1.3rem;
+    }
+
+    .btn-box{
+        position: relative;
+        display: flex;
+        justify-content: left;
+        width: 35.5rem;
+    }
+    
+    .btn-box .btn{
+        width: 15rem;
+        font-size: 1.35rem;
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 437px) {
+    .home-content h1{
+        font-size: 2rem;
+    }
+    .animation_earth .container{
+        transform: scale(0.4);
+    }
+
+    .home-content .text-nimate{
+        width: 24rem
+    }
+
+
+    .home-content .text-nimate h3{
+        font-size: 1.7rem;
+        background-position: -24rem;
+        animation: animebgmobile_three 6s linear infinite;
+        animation-delay: 2s;
+    }
+
+    @keyframes animebgmobile_three {
+        0%,10%,100%{
+            background-position: -24rem 0;
+        }
+    
+        65%,85%{
+            background-position: 0rem 0;
+        }
+    }
+
+    .home-content p{
+        font-size: 1.1rem;
+    }
+
+    .btn-box{
+        width: 30.5rem;
+        height: 5rem;
+    }
+    
+    .btn-box .btn{
+        width: 12rem;
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+    
+}
+
+
+@keyframes animebg {
+    0%,10%,100%{
+        background-position: -44.6rem 0;
+    }
+
+    65%,85%{
+        background-position: 0rem 0;
+    }
+}
+
+@keyframes animecursor {
+    0%,10%,100%{
+        width: 0;
+    }
+
+    65%,78%,85%{
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%, 81%{
+        opacity: 0;
+    }
+}

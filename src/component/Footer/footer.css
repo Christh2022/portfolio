@@ -1,0 +1,101 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+}
+
+.footer-text p{
+    font-size: 1.3rem;
+}
+
+.footer-icon span{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    font-size: 2.4rem;
+    color: var(--main-color);
+    overflow: hidden;
+    z-index: 1;
+    transition: all .4s ease;
+}
+
+.footer-icon span:hover{
+    color: var(--bg-color);
+}
+
+.footer-icon span::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--main-color);
+    z-index: -1;
+    transition: all .4s ease;
+}
+
+.footer-icon span:hover::after{
+    width: 100%;
+}
+
+.footer-icon span .active{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer.gallery{
+    background: var(--second-bg-color);
+}
+
+
+@media (max-width : 962px) {
+    .footer-icon span{
+        font-size: 1.4rem;
+    }
+
+    .footer-icon span .active{
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .footer{
+        padding: 2rem 7%;
+    }
+}
+
+@media (max-width : 962px) {
+    .footer-icon span{
+        font-size: 1.7rem;
+    }
+
+    .footer-icon span .active{
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .footer{
+        padding: 2rem 4%;
+    }
+}
+
+@media (max-width : 526px) {
+    /* .footer-icon span{
+        display: none;
+    } */
+
+    .footer{
+        justify-content: center;
+        text-align: center;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+}

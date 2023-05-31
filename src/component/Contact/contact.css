@@ -1,0 +1,139 @@
+.contact{
+    background: var(--second-bg-color);
+    padding-top: 5rem;
+    min-height: auto;
+}
+
+.contact h2{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.contact h2 span{
+    color: var(--main-color);
+}
+
+.contact form{
+    max-width: 0 auto;
+    margin: 0rem auto;
+    text-align: center;
+}
+
+.contact form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* .contact form  .focus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: red;
+    border-radius: .6rem;
+
+} */
+
+.contact form .input-box .input-field{
+    position: relative;
+    width: 49%;
+    margin: 0.8rem 0;
+    z-index: 1;
+}
+
+.contact form .input-box .input-field input,
+.contact form  .textarea-field textarea{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+    outline: none;
+}
+
+.contact form .focus{
+    position: absolute;
+    background: var(--bg-color);
+    width: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    border-radius: .6rem;
+    z-index: -1;
+    transition: all .5s ease;
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form  .textarea-field textarea::placeholder{
+    color: #ffff;
+}
+
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form  .textarea-field textarea:valid~.focus{
+    width: 100%;
+}
+
+.contact form  .textarea-field{
+    position: relative;
+    margin: 0.8rem 0 2.7rem;
+    display: flex;
+    z-index: 1;
+}
+
+.contact form  .textarea-field textarea{
+    resize: none;
+}
+
+.contact form .btn::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: all .5s ease;
+}
+
+.contact form .btn:hover::after{
+    width: 100%;
+}
+
+.btns{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 960px) {
+    .contact h2{
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .contact h2{
+        font-size: 3.4rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .contact h2{
+        font-size: 3rem;
+    }
+    
+    .contact form .input-box .input-field{
+        width: 100%;
+    }
+}
