@@ -4,10 +4,10 @@ import './skill.css'
 const Skills = () => {
     return (
         <section className='skills' id='skills'>
-            <h2>My <span>Skills</span></h2>
+            <h2>Mes <span>compétences</span></h2>
             <div className="skills-row">
                 <div className="skills-column">
-                    <h3 className="title">Coding Skills</h3>
+                    <h3 className="title">Compétences en code</h3>
 
                     <div className="skills-box">
                         <div className="skills-content">
@@ -51,7 +51,7 @@ const Skills = () => {
                     </div>
                 </div>
                 <div className="skills-column">
-                    <h3 className="title">Professional Skills</h3>
+                    <h3 className="title">Compétences Professional</h3>
 
                     <div className="skills-box">
                         <div className="skills-content">
