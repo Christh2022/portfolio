@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {AiFillCalendar} from 'react-icons/ai'
 import './education.css'
 
 const Education = () => {
+    const [isEducation, setIsEducation] = useState(false);
+
+    useEffect(()=>{
+        const handleScroll = ()=>{
+            setIsEducation(window.scrollY > 2*window.innerHeight - 580)
+        }
+
+        //Appel initial pour définir l'état initial
+        handleScroll()
+        console.log(window.scrollY > 2*window.innerHeight);
+        //utilisation de setInterval pour vérifier périodiquement la position de défilement
+        const interval = setInterval(handleScroll, 100)
+
+        return ()=>{
+            //Nettoyage de l'interval lors du démontage du composant
+            clearTimeout(interval)
+        }
+    }, [])
     return (
-        <section className='education' id='education'>
+        <section className={isEducation ? 'education anime' : 'education'} id='education'>
             <h2>Mon <span>Parcours</span></h2>
             <div className='education-row'>
                 <div className='education-column'>

@@ -24,7 +24,7 @@ const Home = ({active, setActive, img1,img2,img3,img4,img5,img6,img7,img8,img9,i
             <Portfolio img1={img1} img2={img2} img3={img3} img4={img4} img5={img5} img6={img6} img7={img7} img8={img8} img9={img9} img10={img10}/>
             <Contact/>
             <Footer/>
-            <div className={active ? 'blur' : null}></div>
+            <div className={active ? 'blur' : undefined}></div>
         </div>
     );
 };

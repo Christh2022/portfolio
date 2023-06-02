@@ -7,7 +7,7 @@ const ImageFilter = ({tab}) => {
             <div className="image">
                 <span key={index}>
                     {value.img && <img src={value.img} alt="/" />}
-                    <div class='btn_gallery'><button>Voir le site</button></div>
+                    <div className='btn_gallery'><button>Voir le site</button></div>
                 </span>
             </div>)}
         </div>

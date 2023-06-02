@@ -13,13 +13,15 @@ const Header = ({active, setActive}) => {
           setIsSticky(window.scrollY > 20);
         };
     
-        handleScroll(); // Appel initial pour définir l'état initial
+        // Appel initial pour définir l'état initial
+        handleScroll(); 
     
         // Utilisation de setInterval pour vérifier périodiquement la position de défilement
         const interval = setInterval(handleScroll, 100);
     
         return () => {
-          clearInterval(interval); // Nettoyage de l'intervalle lors du démontage du composant
+            // Nettoyage de l'intervalle lors du démontage du composant
+            clearInterval(interval); 
         };
     }, [])
 
@@ -33,7 +35,7 @@ const Header = ({active, setActive}) => {
 
     return (
         <>
-        <header className={isSticky && 'sticky'}>
+        <header className={isSticky ? 'sticky' : undefined}>
             <h2 className='logo' >Christh.</h2>
             <div id='menu-icon' onClick={handleMobile}><BiMenu/></div>
             <nav>

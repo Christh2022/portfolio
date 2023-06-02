@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../../logo.svg'
 import './abou.css'
 
 const About = () => {
+    const [isAbout, setIsAbout] = useState(false);
+    useEffect(()=>{
+        const handleScroll = ()=>{
+            setIsAbout(window.scrollY > window.innerHeight - 580)
+        }
+
+        //Appel initial pour définir l'état initial
+        handleScroll()
+        console.log(window.scrollY > 2*window.innerHeight);
+        //utilisation de setInterval pour vérifier périodiquement la position de défilement
+        const interval = setInterval(handleScroll, 100)
+
+        return ()=>{
+            //Nettoyage de l'interval lors du démontage du composant
+            clearTimeout(interval)
+        }
+    }, [])
     return (
-        <section className='about' id='apropos'>
+        <section className={isAbout ? 'about anime' : 'about'} id='apropos'>
             <h2 className="heading"> A propos de <span>Moi</span></h2>
             <div className='about-img'>
                 <img src={logo} alt="" />

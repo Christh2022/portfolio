@@ -363,19 +363,19 @@ section{
     }
 
     .home-content .text-nimate{
-        width: 42rem
+        width: 39rem
     }
 
     .home-content .text-nimate h3{
         font-size: 3rem;
-        background-position: -41.5rem 0;
+        background-position: -39rem 0;
         animation: animebgmobile 6s linear infinite;
         animation-delay: 2s;
     }
 
     @keyframes animebgmobile {
         0%,10%,100%{
-            background-position: -42rem 0;
+            background-position: -39rem 0;
         }
     
         65%,85%{
@@ -393,19 +393,19 @@ section{
     }
 
     .home-content .text-nimate{
-        width: 32.2rem
+        width: 30rem
     }
 
     .home-content .text-nimate h3{
         font-size: 2.3rem;
-        background-position: -32.2rem 0;
+        background-position: -30rem 0;
         animation: animebgmobile_two 6s linear infinite;
         animation-delay: 2s;
     }
 
     @keyframes animebgmobile_two {
         0%,10%,100%{
-            background-position: -32.2rem 0;
+            background-position: -30rem 0;
         }
     
         65%,85%{
@@ -440,20 +440,20 @@ section{
     }
 
     .home-content .text-nimate{
-        width: 24rem
+        width: 22rem
     }
 
 
     .home-content .text-nimate h3{
         font-size: 1.7rem;
-        background-position: -24rem;
+        background-position: -22rem;
         animation: animebgmobile_three 6s linear infinite;
         animation-delay: 2s;
     }
 
     @keyframes animebgmobile_three {
         0%,10%,100%{
-            background-position: -24rem 0;
+            background-position: -22rem 0;
         }
     
         65%,85%{

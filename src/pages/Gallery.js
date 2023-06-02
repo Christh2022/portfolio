@@ -14,7 +14,7 @@ const Gallery = ({active, setActive, img1,img2,img3,img4,img5,img6,img7,img8,img
         navigate('/')
     }
     return (
-        <div className={active? 'unscroll' : null}>
+        <div className={active? 'unscroll' : undefined}>
             <section className='container gallery'>
                 <div className="container-wrapper">
                     <Header active={active} setActive={setActive}/>

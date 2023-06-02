@@ -38,7 +38,7 @@ const Portfolio = ({img1,img2,img3,img4,img5,img6,img7,img8,img9,img10}) => {
                 pagination={{el:'.swiper-pagination',clickable:true}}
                 modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
 
-                class='swiper_container'
+                className='swiper_container'
             >
                 <SwiperSlide id='slide_img'>
                     <img src={img1} alt="/" />
@@ -71,12 +71,10 @@ const Portfolio = ({img1,img2,img3,img4,img5,img6,img7,img8,img9,img10}) => {
                     <img src={img10} alt="/" />
                 </SwiperSlide>
 
-                <div class="slider-controler">
-                    <div class="swiper-button-prev slider-arrow"><span></span></div>
-                    <div class="swiper-button-next slider-arrow"><span></span></div>
-                    <div class="swiper-pagination">
-                        
-                    </div>
+                <div className="slider-controler">
+                    <div className="swiper-button-prev slider-arrow"><span></span></div>
+                    <div className="swiper-button-next slider-arrow"><span></span></div>
+                    <div className="swiper-pagination"></div>
                 </div>
             </Swiper>
             <button className='btn' onClick={handlegallery}>Voir Plus</button>

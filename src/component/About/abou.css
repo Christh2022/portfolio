@@ -9,10 +9,17 @@
     padding-bottom: 6rem;
 }
 
+.about.anime .heading{
+    opacity: 1;
+    transition: all 2.6s ease;
+}
+
 .heading{
+    opacity: 0;
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
+    transition: all 2.5s ease;
 }
 
 .heading span{
