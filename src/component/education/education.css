@@ -22,7 +22,7 @@
 }
 
 @keyframes h2animation {
-    0% {transform: translateY(100px);}
+    0% {transform: translateY(600px);}
     100% {transform: translateY(0);}
 }
 

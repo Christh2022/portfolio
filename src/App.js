@@ -3,7 +3,7 @@ import './App.css';
 import Home from './pages/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Gallery from './pages/Gallery';
-import img1 from './assets/1.webp';
+import img1 from './assets/1.png';
 import img2 from './assets/2.jpg';
 import img3 from './assets/3.webp';
 import img4 from './assets/4.webp';
