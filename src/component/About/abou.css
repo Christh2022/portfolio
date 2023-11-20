@@ -7,20 +7,33 @@
     flex-direction: column;
     background: var(--second-bg-color);
     padding-bottom: 6rem;
+    transition-delay: 200ms;
+    transition: all .3s ease;
+    opacity: 1;
 }
 
-.about.anime .heading{
-    opacity: 1;
-    transition: all 2.6s ease;
+.about.animate{
+    opacity: 0;
+    transition: all 1s ease;
+    transition-delay: 1s;
 }
 
 .heading{
-    opacity: 0;
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
-    transition: all 2.5s ease;
+    transition: all 1s ease;
+    transition-delay: .5s;
 }
+
+.heading.hide{
+    font-size: 1rem;
+    opacity: 0;
+    transition: all .5s ease;
+    transition-delay: .5s;
+}
+
+
 
 .heading span{
     color: var(--main-color);
@@ -53,6 +66,25 @@
 .btn.btn1{
     margin-top: 2rem;
     width: 19.5rem;
+    opacity: 0;
+}
+
+.btn.btn1.anime{
+    animation: myAnim1 1.2s ease 0s 2 normal forwards;
+    opacity: 1;
+}
+
+@keyframes myAnim1 {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
 }
 
 .about-img .circle-spin{
@@ -87,9 +119,64 @@
 }
 
 .about-content p{
+    opacity: 0;
     font-size: 1.6rem; 
     margin: 2rem 0 3rem;
     text-align: justify;
+}
+
+.about-content p.anime{
+    opacity: 1;
+    animation: myAnim 1s ease 0s 1 normal forwards;
+
+}
+.about-content p.hide{
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
 }
 
 @media (max-width: 960px) {
