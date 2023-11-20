@@ -18,12 +18,51 @@
 .education.anime h2{
     opacity: 1;
     transition: 0.6s;
-    animation: h2animation 0.5s ease 0s 1 normal none;
+    animation: title 2s ease 0.5s 1 normal forwards;
 }
 
-@keyframes h2animation {
-    0% {transform: translateY(600px);}
-    100% {transform: translateY(0);}
+@keyframes title{
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
 }
 
 .education h2 span{
@@ -53,12 +92,34 @@
     opacity: 1;
     left: 0;
     transition: 1.8s;
-    animation: title__animation 1.8s ease 0s 1 normal none;
+    animation: title__animation 1s ease 1s 1 normal forwards;
+}
+.education.anime .education-column .title.right{
+    animation: title__animation_right 1s ease 1s 1 normal forwards;
 }
 
+
 @keyframes title__animation {
-    0% {left: -300px;;}
-    100% {left: 0;}
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes title__animation_right {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 

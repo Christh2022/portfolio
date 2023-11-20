@@ -1,28 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {AiFillCalendar} from 'react-icons/ai'
 import './education.css'
+import { useInView } from 'react-intersection-observer';
 
 const Education = () => {
-    const [isEducation, setIsEducation] = useState(false);
-
-    useEffect(()=>{
-        const handleScroll = ()=>{
-            setIsEducation(window.scrollY > 2*window.innerHeight - 580)
-        }
-
-        //Appel initial pour définir l'état initial
-        handleScroll()
-        console.log(window.scrollY > 2*window.innerHeight);
-        //utilisation de setInterval pour vérifier périodiquement la position de défilement
-        const interval = setInterval(handleScroll, 100)
-
-        return ()=>{
-            //Nettoyage de l'interval lors du démontage du composant
-            clearTimeout(interval)
-        }
-    }, [])
+    const { ref: title, inView: isEducation} = useInView();
     return (
-        <section className={isEducation ? 'education anime' : 'education'} id='education'>
+        <section ref={title} className={isEducation ? 'education anime' : 'education'} id='education'>
             <h2>Mon <span>Parcours</span></h2>
             <div className='education-row'>
                 <div className='education-column'>
@@ -55,7 +39,7 @@ const Education = () => {
                     </div>
                 </div>
                 <div className='education-column'>
-                    <h3 className="title">expérience</h3>
+                    <h3 className="title right">expérience</h3>
                     <div className="education-box">
                         <div className="education-content">
                             <div className="content">
