@@ -15,9 +15,10 @@
     text-align: center;
 }
 
-.education.anime h2{
+h2.title_show{
     opacity: 1;
     transition: 0.6s;
+    transition-delay: 1s;
     animation: title 2s ease 0.5s 1 normal forwards;
 }
 
@@ -87,17 +88,26 @@
     text-transform: uppercase;
 }
 
-.education.anime .education-column .title{
+.education .education-column .title{
     position: relative;
-    opacity: 1;
-    left: 0;
-    transition: 1.8s;
-    animation: title__animation 1s ease 1s 1 normal forwards;
 }
-.education.anime .education-column .title.right{
-    animation: title__animation_right 1s ease 1s 1 normal forwards;
+.education .education-column .title.left{
+    transition: 1s;
+    opacity: 1;
+    transition-delay: 1s;
+    animation: title__animation .5s ease 1s 1 normal forwards;
+}
+.education .education-column .title.right{
+    transition: 1s;
+    opacity: 1;
+    animation: title__animation_right .5s ease 1.5s 1 normal forwards;
+    transition-delay: 1.5s;
 }
 
+.hide{
+    opacity: 0;
+    transition: .1s;
+}
 
 @keyframes title__animation {
 	0% {
@@ -169,15 +179,26 @@
     opacity: 0;
 }
 
-.education.anime .education-content .content{
+.education .education-content .content{
+    opacity: 1;
+    transition: 1s ease;
+}
+
+.education-content.animate{
     opacity: 1;
     transition: 1s;
     animation: content__animation 1s ease 0s 1 normal none;
 }
+.education-content.animate.box1{
+    transition-delay: 1.3s;
+}
+.education-content.animate.box2{
+    transition-delay: 1.6s;
+}
 
 @keyframes content__animation  {
     0% {
-        transform: translateX(100px);
+        transform: translateX(-100px);
     }
     100% {
         transform: translateX(0);
