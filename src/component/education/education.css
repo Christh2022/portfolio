@@ -138,7 +138,7 @@ h2.title_show{
     opacity: 0;
 }
 
-.education.anime .education-column .education-box{
+.education .education-column .education-box{
     opacity: 1;
     transition: 1.4s;
     animation: boxe__animation 1.4s ease 0s 1 normal none;
@@ -198,7 +198,7 @@ h2.title_show{
 
 @keyframes content__animation  {
     0% {
-        transform: translateX(-100px);
+        transform: translateX(-200px);
     }
     100% {
         transform: translateX(0);
