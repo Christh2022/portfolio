@@ -111,7 +111,7 @@
 @keyframes boxe__animation  {
     0% {
         opacity: 0;
-        transform: translate(0, 100px);
+        transform: translate(0, 20px);
     }
     100% {
         opacity: 1;
@@ -155,7 +155,7 @@
 @keyframes box_educ {
     0% {
         opacity: 0;
-        transform: translateX(-250px);
+        transform: translateX(-50px);
     }
 
     100% {
@@ -176,7 +176,7 @@
 @keyframes box_exp {
     0% {
         opacity: 0;
-        transform: translateX(250px);
+        transform: translateX(50px);
     }
 
     100% {
@@ -253,6 +253,9 @@
     .education-content .content.animate.exp.box2 {
         animation: box_exp .6s ease 1.05s 1 normal forwards;
     } 
+
+   
+    
 }
 
 @media (max-width: 720px) {
