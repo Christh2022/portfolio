@@ -1,5 +1,4 @@
-import React from 'react';
-import logo from '../../logo.svg'
+import logo from '../../assets/1.png'
 import './abou.css'
 import { useInView } from 'react-intersection-observer';
 
@@ -20,15 +19,15 @@ const About = () => {
             </div>
             <div className="about-content">
                 <h3>Développeurr Web & Mobile !</h3>
-                <p ref={content} class={myElementVisible2 ? 'anime' : 'hide'}>
+                <p ref={content} className={myElementVisible2 ? 'anime' : 'hide'}>
                     Actuellement en 2e année, je suis un étudiant passionné par le développement web 
-                    et mobile. j'ai choisi ce domaine en raison de mon intérêt pour les technologies 
-                    de l'information et la manière dont elles peuvent être utilisées pour résoudre 
+                    et mobile. j&#39;ai choisi ce domaine en raison de mon intérêt pour les technologies 
+                    de l&#39;information et la manière dont elles peuvent être utilisées pour résoudre 
                     des problèmes et améliorer la vie des gens. je suis constamment à la recherche 
                     de nouvelles compétences et de nouvelles technologies à apprendre, et je suis 
                     motivé à travailler dur pour atteindre mes objectifs. je suis également capable 
                     de travailler en équipe et de collaborer efficacement avec les autres pour créer 
-                    des solutions innovantes. En tant qu'étudiant en développement web et mobile, 
+                    des solutions innovantes. En tant qu&#39;tudiant en développement web et mobile, 
                     je suis bien équipé pour réussir dans un monde numérique en constante évolution.
                 </p>
                 <div ref={btn} className='btn-box box_center'>

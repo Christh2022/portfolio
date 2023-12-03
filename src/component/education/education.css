@@ -1,11 +1,17 @@
 .education{
+    margin-top: 0;
+    padding: 2rem 9%;
     padding-top: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     flex-direction: column;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
+    gap: 2rem;
+    transition-delay: 200ms;
+    transition: all .3s ease;
+    opacity: 1; 
+    
 }
 
 .education h2{
@@ -13,58 +19,17 @@
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
+    transition: 0.6s;
+    transform: scale(0);
 }
 
-h2.title_show{
+.education h2.title_show{
     opacity: 1;
     transition: 0.6s;
-    transition-delay: 1s;
-    animation: title 2s ease 0.5s 1 normal forwards;
+    transform: scale(1);
+    transition-delay: .3s;
 }
 
-@keyframes title{
-	0% {
-		animation-timing-function: ease-in;
-		opacity: 0;
-		transform: translateY(-250px);
-	}
-
-	38% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	55% {
-		animation-timing-function: ease-in;
-		transform: translateY(-65px);
-	}
-
-	72% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-
-	81% {
-		animation-timing-function: ease-in;
-		transform: translateY(-28px);
-	}
-
-	90% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-
-	95% {
-		animation-timing-function: ease-in;
-		transform: translateY(-8px);
-	}
-
-	100% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-}
 
 .education h2 span{
     color: var(--main-color);
@@ -86,30 +51,19 @@ h2.title_show{
     font-size: 2.5rem;
     margin: 0 0 1.5rem 2rem;
     text-transform: uppercase;
+
 }
 
 .education .education-column .title{
     position: relative;
+    
 }
+
 .education .education-column .title.left{
-    transition: 1s;
-    opacity: 1;
-    transition-delay: 1s;
-    animation: title__animation .5s ease 1s 1 normal forwards;
-}
-.education .education-column .title.right{
-    transition: 1s;
-    opacity: 1;
-    animation: title__animation_right .5s ease 1.5s 1 normal forwards;
-    transition-delay: 1.5s;
+    animation: title_left .3s ease .5s 1 normal forwards;
 }
 
-.hide{
-    opacity: 0;
-    transition: .1s;
-}
-
-@keyframes title__animation {
+@keyframes title_left  {
 	0% {
 		opacity: 0;
 		transform: translateX(-250px);
@@ -120,7 +74,12 @@ h2.title_show{
 		transform: translateX(0);
 	}
 }
-@keyframes title__animation_right {
+
+.education .education-column .title.right{
+    animation: title_right .3s ease 1s 1 normal forwards;
+}
+ 
+@keyframes title_right  {
 	0% {
 		opacity: 0;
 		transform: translateX(250px);
@@ -131,24 +90,31 @@ h2.title_show{
 		transform: translateX(0);
 	}
 }
-
+.hide{
+    opacity: 0;
+    transition: opacity .1s ease;
+}
 
 .education-column .education-box{
     border-left: .2rem solid var(--main-color);
     opacity: 0;
+    transition-delay: 1s;
 }
 
-.education .education-column .education-box{
+.education-column  .education-box.show{
+    animation: boxe__animation .3s ease 1.2s 1 normal none;
     opacity: 1;
-    transition: 1.4s;
-    animation: boxe__animation 1.4s ease 0s 1 normal none;
+    transition: opacity 1s ease;
+    transition-delay: 1.2s;
 }
 
 @keyframes boxe__animation  {
     0% {
-        transform: translate(0, 300px);
+        opacity: 0;
+        transform: translate(0, 100px);
     }
     100% {
+        opacity: 1;
         transform: translate(0 , 0);
     }
 }
@@ -167,8 +133,7 @@ h2.title_show{
     height: 2rem;
     background: var(--main-color);
     border-radius: 50%;
-}
-
+} 
 .education-content .content{
     position: relative;
     padding: 1.5rem;
@@ -177,33 +142,50 @@ h2.title_show{
     margin-bottom: 2rem;
     overflow: hidden;
     opacity: 0;
-}
+} 
 
-.education .education-content .content{
-    opacity: 1;
-    transition: 1s ease;
-}
+.education-content .content.animate.educ.box1 {
+    animation: box_educ .3s ease 1.4s 1 normal forwards;
+} 
 
-.education-content.animate{
-    opacity: 1;
-    transition: 1s;
-    animation: content__animation 1s ease 0s 1 normal none;
-}
-.education-content.animate.box1{
-    transition-delay: 1.3s;
-}
-.education-content.animate.box2{
-    transition-delay: 1.6s;
-}
+.education-content .content.animate.educ.box2 {
+    animation: box_educ .3s ease 1.7s 1 normal forwards;
+} 
 
-@keyframes content__animation  {
+@keyframes box_educ {
     0% {
-        transform: translateX(-200px);
+        opacity: 0;
+        transform: translateX(-250px);
     }
+
     100% {
+        opacity: 1;
         transform: translateX(0);
     }
 }
+
+
+.education-content .content.animate.exp.box1 {
+    animation: box_exp .3s ease 1.6s 1 normal forwards;
+} 
+
+.education-content .content.animate.exp.box2 {
+    animation: box_exp .3s ease 1.9s 1 normal forwards;
+} 
+
+@keyframes box_exp {
+    0% {
+        opacity: 0;
+        transform: translateX(250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 
 .education-content .content::before{
     content: '';
@@ -216,7 +198,6 @@ h2.title_show{
     z-index: -1;
     transition: all .5s ease;
 }
-
 .education-content .content:hover::before{
     width: 100%;
 }
@@ -240,6 +221,39 @@ h2.title_show{
         font-size: 4rem;
     }
 }
+@media (max-width: 900px) {
+    .education h2.title_show{
+        transition: 0.4s;
+        transition-delay: 0s;
+    }
+
+    .education .education-column .title.left{
+        animation: title_left .6s ease .3s 1 normal forwards;
+    }
+
+    .education .education-column .title.right{
+        animation: title_right .6s ease .3s 1 normal forwards;
+    }
+
+    .education-column  .education-box.show{
+        animation: boxe__animation 0.6s ease 0s 1 normal none;
+    }
+    .education-content .content.animate.educ.box1 {
+        animation: box_educ .6s ease .8s 1 normal forwards;
+    } 
+    
+    .education-content .content.animate.educ.box2 {
+        animation: box_educ .6s ease 1.05s 1 normal forwards;
+    } 
+
+    .education-content .content.animate.exp.box1 {
+        animation: box_exp .6s ease .8s 1 normal forwards;
+    } 
+    
+    .education-content .content.animate.exp.box2 {
+        animation: box_exp .6s ease 1.05s 1 normal forwards;
+    } 
+}
 
 @media (max-width: 720px) {
     .education h2{
@@ -258,7 +272,6 @@ h2.title_show{
         font-size: 1.2rem;
     }
 }
-
 @media (max-width: 420px) {
     .education h2{
         font-size: 3rem;
@@ -275,4 +288,6 @@ h2.title_show{
     .education-content .content p{
         font-size: 1.1rem;
     }
-}
+} 
+
+

@@ -1,42 +1,35 @@
 .about{
+    padding: 2rem 9%;
     padding-top: 5rem;
+        padding-bottom: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
     flex-direction: column;
+    gap: 2rem;
     background: var(--second-bg-color);
-    padding-bottom: 6rem;
     transition-delay: 200ms;
     transition: all .3s ease;
-    opacity: 1;
+    opacity: 1; 
 }
 
-.about.animate{
-    opacity: 0;
-    transition: all 1s ease;
-    transition-delay: 1s;
-}
-
-.heading{
+.about h2{
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
-    transition: all 1s ease;
-    transition-delay: .5s;
-}
-
-.heading.hide{
-    font-size: 1rem;
+    transition: all .6s ease;
     opacity: 0;
-    transition: all .5s ease;
-    transition-delay: .5s;
+}
+
+.about h2.heading{
+    opacity: 1;
+    transform: scale(1);
 }
 
 
-
-.heading span{
-    color: var(--main-color);
+.about h2.heading.hide{
+    transform: scale(0);
+    transition-delay: .5s;
 }
 
 .about-img{
@@ -56,6 +49,10 @@
     border: .2rem solid var(--main-color);
 }
 
+.heading span{
+    color: var(--main-color);
+}
+
 .btn-box.box_center{
     width: 100%;
     display: flex;
@@ -63,30 +60,33 @@
     align-items: center;
 }
 
+.btn-box.box_center .btn{
+    width: 22rem;
+}
+
 .btn.btn1{
     margin-top: 2rem;
-    width: 19.5rem;
+    width: 22rem;
     opacity: 0;
 }
 
 .btn.btn1.anime{
-    animation: myAnim1 1.2s ease 0s 2 normal forwards;
+    animation: myAnim1 .5s ease .4s 2 normal forwards;
     opacity: 1;
 }
 
 @keyframes myAnim1 {
-	0%,
-	50%,
-	100% {
-		opacity: 1;
-	}
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
 
-	25%,
-	75% {
-		opacity: 0;
-	}
+    25%,
+    75% {
+        opacity: 0;
+    }
 }
-
 .about-img .circle-spin{
     position: absolute;
     top: 50%;
@@ -107,9 +107,6 @@
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
-
-
-
 .about-content{
     text-align: center;
 }
@@ -127,7 +124,7 @@
 
 .about-content p.anime{
     opacity: 1;
-    animation: myAnim 1s ease 0s 1 normal forwards;
+    animation: myAnim .6s ease 0s 1 normal forwards;
 
 }
 .about-content p.hide{
@@ -136,51 +133,50 @@
 }
 
 @keyframes myAnim {
-	0% {
-		animation-timing-function: ease-in;
-		opacity: 0;
-		transform: translateY(250px);
-	}
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: translateY(120px);
+    }
 
-	38% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-		transform: translateY(0);
-	}
+    38% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-	55% {
-		animation-timing-function: ease-in;
-		transform: translateY(65px);
-	}
+    55% {
+        animation-timing-function: ease-in;
+        transform: translateY(65px);
+    }
 
-	72% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
+    72% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
 
-	81% {
-		animation-timing-function: ease-in;
-		transform: translateY(28px);
-	}
+    81% {
+        animation-timing-function: ease-in;
+        transform: translateY(28px);
+    }
 
-	90% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
+    90% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
 
-	95% {
-		animation-timing-function: ease-in;
-		transform: translateY(8px);
-	}
+    95% {
+        animation-timing-function: ease-in;
+        transform: translateY(8px);
+    }
 
-	100% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
+    100% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
 }
-
 @media (max-width: 960px) {
-    .heading{
+    .about h2{
         font-size: 4rem;
     }
 
@@ -192,14 +188,17 @@
         font-size: 1.4rem; 
     }
 
-    .btn.btn1{
+    .btn-box.box_center .btn{
         font-size: 1.45rem;
         width: 17.2rem;
     }
 }
 
 @media (max-width: 720px) {
-    .heading{
+    .about{
+        padding: 2rem 6%;
+    }
+    .about h2{
         font-size: 3rem;
     }
 
@@ -217,14 +216,14 @@
         height: 18rem;;
     }
 
-    .btn.btn1{
+    .btn-box.box_center .btn{
         font-size: 1.3rem;
         width: 16.5rem;
     }
 }
 
 @media (max-width: 420px) {
-    .heading{
+    .about h2{
         font-size: 2.4rem;
     }
 
@@ -242,7 +241,7 @@
         height: 14rem;;
     }
 
-    .btn.btn1{
-        width: 15rem;
+    .btn-box.box_center .btn{
+        width: 18rem;
     }
-}
+} 
