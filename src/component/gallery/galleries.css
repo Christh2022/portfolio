@@ -1,6 +1,8 @@
 .wrapper{
     /* background: red; */
+    padding: 2rem 9%;
     margin: 100px auto;
+    min-height: 80vh;
 }
 
 .wrapper .wrapper_content_nav{
@@ -109,6 +111,7 @@
     transition: all .5s ease;
     cursor: pointer;
     background: none;
+    margin: 2rem 9%;
 }
 
 .container.gallery button.back:hover{
@@ -118,6 +121,9 @@
 
 
 @media (max-width: 960px) {
+    .wrapper{
+        padding: 2rem 5%;
+    }
     .gallery_wrapper .image{
         width: calc(100% / 3);
     }
@@ -130,6 +136,7 @@
 }
 
 @media (max-width: 720px) {
+    
     .gallery_wrapper .image{
         width: calc(100% / 2);
     }

@@ -50,7 +50,7 @@ const Portfolio = ({img1,img2,img3,img4,img5,img6,img7,img8,img9,img10}) => {
                 </SwiperSlide>
                 <SwiperSlide id='slide_img'>
                     <img src={img2} alt="/" />
-                    <div className='see_Website'><button>Voir le site</button></div>
+                    <div className='see_Website'><button onClick={()=>seeWebsite('https://ecommercengala.netlify.app/home')}>Voir le site</button></div>
                 </SwiperSlide>
                 <SwiperSlide id='slide_img'>
                     <img src={img3} alt="/" />

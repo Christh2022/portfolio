@@ -34,10 +34,10 @@ const Education = () => {
                                 <div className="year"><AiFillCalendar/> 2021 - Auj</div>
                                 <h3>Bachelor Developpement web - Ecole Multimédia de paris</h3>
                                 <p>
-                                    Au cours de cette formation, j&apos;ai pu acquérir une solide 
-                                    base de connaissances en mathématiques pures et appliquées. 
-                                    Les cours abordent des sujets tels que l&apos;algèbre, l&apos;analyse, 
-                                    la géométrie, la statistique et la théorie des probabilités.
+                                    Au cours de cette formation, j'ai pu acquérir une solide base de connaissances 
+                                    en développement web, englobant à la fois les aspects théoriques et pratiques 
+                                    de ce domaine en constante évolution.  je suis immergé dans un programme d'études 
+                                    dynamique et axé sur la maîtrise 
                                 </p>
                             </div>
                         </div>
@@ -51,22 +51,21 @@ const Education = () => {
                                 <div className="year"><AiFillCalendar/> 2021 - 2021</div>
                                 <h3>Developpeur Font-End - MCS international</h3>
                                 <p>
-                                    Au cours de cette formation, j&apos;ai pu acquérir une solide 
-                                    base de connaissances en mathématiques pures et appliquées. 
-                                    Les cours abordent des sujets tels que l&apos;algèbre, l&apos;analyse, 
-                                    la géométrie, la statistique et la théorie des probabilités.
+                                    En tant que développeur web chez MCS International, j'ai géré la conception front-end en 
+                                    utilisant HTML, CSS et JavaScript, créant des interfaces intuitives et responsives pour 
+                                    améliorer l'expérience utilisateur.
                                 </p>
                             </div>
                         </div>
                         <div  className={"education-content"}>
                             <div ref={box_expo2}  className={isBoxExp2 ? "content animate box1 exp" : "hide"}>
-                                <div className="year"><AiFillCalendar/> 2021 - 2022</div>
+                                <div className="year"><AiFillCalendar/> 2022 - 2023</div>
                                 <h3>Développeur FullStack - EASYSTUDY</h3>
                                 <p>
-                                    Au cours de cette formation, j&apos;ai pu acquérir une solide 
-                                    base de connaissances en mathématiques pures et appliquées. 
-                                    Les cours abordent des sujets tels que l&apos;algèbre, l&apos;analyse, 
-                                    la géométrie, la statistique et la théorie des probabilités.
+                                    En tant que développeur chez EasyStudy, j'ai piloté simultanément le développement front-end et 
+                                    back-end en utilisant des langages tels que HTML, CSS, React, Node.js et Express.js. Mon rôle 
+                                    a également inclus la mise en place et la gestion du système de paiement MTN Mobile Money, 
+                                    intégrant ainsi des fonctionnalités sécurisées et efficaces pour les transactions.
                                 </p>
                             </div>
                         </div>

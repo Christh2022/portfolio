@@ -20,7 +20,7 @@ const About = () => {
             <div className="about-content">
                 <h3>Développeurr Web & Mobile !</h3>
                 <p ref={content} className={myElementVisible2 ? 'anime' : 'hide'}>
-                    Actuellement en 2e année, je suis un étudiant passionné par le développement web 
+                    Actuellement en 3e année, je suis un étudiant passionné par le développement web 
                     et mobile. j&#39;ai choisi ce domaine en raison de mon intérêt pour les technologies 
                     de l&#39;information et la manière dont elles peuvent être utilisées pour résoudre 
                     des problèmes et améliorer la vie des gens. je suis constamment à la recherche 

@@ -4,16 +4,16 @@ import ImageFilter from './Image_Filter';
 
 const Galleries = ({img1,img2,img3,img4,img5,img6,img7,img8,img9,img10}) => {
     const [list, setList] = useState([
-        {img: img1,description :'frontend'}, 
-        {img: img2,description :'jeux'},
-        {img: img3,description :'jeux'},
-        {img: img4,description :'backend'},
-        {img: img5,description :'frontend'},
-        {img: img6,description :'jeux'},
-        {img: img7,description :'jeux'},
-        {img: img8,description :'framework'},
-        {img: img9,description :'jeux'},
-        {img: img10,description :'jeux'}
+        {img: img1,description :'frontend', url : 'https://bazotchfit.netlify.app/'}, 
+        {img: img2,description :'frontend',url : 'https://ecommercengala.netlify.app/home'},
+        {img: img3,description :'jeux', url : ''},
+        {img: img4,description :'backend', url : ''},
+        {img: img5,description :'frontend', url : ''},
+        {img: img6,description :'jeux', url : ''},
+        {img: img7,description :'jeux', url : ''},
+        {img: img8,description :'framework', url : ''},
+        {img: img9,description :'jeux', url : ''},
+        {img: img10,description :'jeux', url : ''}
     ])
     const [tab, setTab] = useState([...list])
     useEffect(()=>{
