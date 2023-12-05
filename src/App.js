@@ -13,11 +13,14 @@ import img7 from './assets/7.jpg';
 import img8 from './assets/8.jpg';
 import img9 from './assets/9.jpg';
 import img10 from './assets/10.jpg';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  const [active, setActive] =  useState(false)
+  const [active, setActive] =  useState(false);
   return (
     <div>
+      <ToastContainer/>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home active={active} setActive={setActive} img1={img1} img2={img2} img3={img3} img4={img4} img5={img5} img6={img6} img7={img7} img8={img8} img9={img9} img10={img10}/>}/>

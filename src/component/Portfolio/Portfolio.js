@@ -14,6 +14,10 @@ const Portfolio = ({img1,img2,img3,img4,img5,img6,img7,img8,img9,img10}) => {
     const handlegallery = ()=>{
         navigate('/portfolio')
     }
+
+    const seeWebsite = (url)=>{
+        window.open(url, "_blank")
+    }
     return (
         <section className='portfolio' id='portfolio'>
             <h2>Mon <span>Portfolio</span></h2>
@@ -42,33 +46,43 @@ const Portfolio = ({img1,img2,img3,img4,img5,img6,img7,img8,img9,img10}) => {
             >
                 <SwiperSlide id='slide_img'>
                     <img src={img1} alt="/" />
+                    <div className='see_Website'><button onClick={()=>seeWebsite("https://bazotchfit.netlify.app/")}>Voir le site</button></div>
                 </SwiperSlide>
                 <SwiperSlide id='slide_img'>
                     <img src={img2} alt="/" />
+                    <div className='see_Website'><button>Voir le site</button></div>
                 </SwiperSlide>
                 <SwiperSlide id='slide_img'>
                     <img src={img3} alt="/" />
+                    <div className='see_Website'><button>Voir le site</button></div>
                 </SwiperSlide>
                 <SwiperSlide id='slide_img'>
                     <img src={img4} alt="/" />
+                    <div className='see_Website'><button>Voir le site</button></div>
                 </SwiperSlide>
                 <SwiperSlide id='slide_img'>
                     <img src={img5} alt="/" />
+                    <div className='see_Website'><button>Voir le site</button></div>
                 </SwiperSlide>
                 <SwiperSlide id='slide_img'>
                     <img src={img6} alt="/" />
+                    <div className='see_Website'><button>Voir le site</button></div>
                 </SwiperSlide>
                 <SwiperSlide id='slide_img'>
                     <img src={img7} alt="/" />
+                    <div className='see_Website'><button>Voir le site</button></div>
                 </SwiperSlide>
                 <SwiperSlide id='slide_img'>
                     <img src={img8} alt="/" />
+                    <div className='see_Website'><button>Voir le site</button></div>
                 </SwiperSlide>
                 <SwiperSlide id='slide_img'>
                     <img src={img9} alt="/" />
+                    <div className='see_Website'><button>Voir le site</button></div>
                 </SwiperSlide>
                 <SwiperSlide id='slide_img'>
                     <img src={img10} alt="/" />
+                    <div className='see_Website'><button>Voir le site</button></div>
                 </SwiperSlide>
 
                 <div className="slider-controler">

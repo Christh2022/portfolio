@@ -4,8 +4,6 @@ import { useInView } from 'react-intersection-observer';
 
 const Education = () => {
     const { ref: title, inView: isEducation} = useInView();
-    const { ref: education, inView: isEducate} = useInView();
-    const { ref: experience, inView: isExpert } = useInView();
     const { ref: box_educ, inView: isBoxEduc } = useInView();
     const { ref: box_exp, inView: isBoxExp } = useInView();
     const { ref: box_educ1, inView: isBoxEduc1 } = useInView();
@@ -17,7 +15,7 @@ const Education = () => {
             <h2 ref={title} className={isEducation && 'title_show'}>Mon <span>Parcours</span></h2>
             <div className='education-row'>
                 <div className='education-column'>
-                    <h3 ref={education} className={isEducate ? "title left" : 'hide'}>éducation</h3>
+                    <h3  className={"title left"}>éducation</h3>
                     <div ref={box_educ} className={isBoxEduc ? "education-box show" : "hide"}>
                         <div  className={"education-content"}>
                             <div ref={box_educ1} className={isBoxEduc1 ? "content animate box1 educ": 'hide'}>
@@ -46,7 +44,7 @@ const Education = () => {
                     </div>
                 </div>
                 <div className='education-column'>
-                    <h3 ref={experience} className={isExpert ? "title right" : 'hide'}>expérience</h3>
+                    <h3  className={"title right" }>expérience</h3>
                     <div ref={box_exp} className={isBoxExp ? "education-box show" : "hide"}>
                         <div  className={"education-content"}>
                             <div ref={box_expo1} className={isBoxExp1 ? "content animate box1 exp" : "hide"}>

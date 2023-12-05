@@ -1,4 +1,4 @@
-import logo from '../../assets/1.png'
+import profil from '../../assets/profil.jpg'
 import './abou.css'
 import { useInView } from 'react-intersection-observer';
 
@@ -14,7 +14,7 @@ const About = () => {
         <section className={ 'about' } id='apropos'>
             <h2 ref={title} className={myElementVisible1 ? "heading" : 'heading hide'}> A propos de <span>Moi</span></h2>
             <div className='about-img'>
-                <img src={logo} alt="" />
+                <img src={profil} alt="" />
                 <span className="circle-spin"></span>
             </div>
             <div className="about-content">

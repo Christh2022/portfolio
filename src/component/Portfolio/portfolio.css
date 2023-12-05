@@ -16,18 +16,59 @@
     color: var(--main-color);
 }
 
-.portfolio img{
+#slide_img img{
     width: 100%;
     height: 100%;
+    aspect-ratio: 8/5;
     vertical-align: middle;
     transition: all .5s ease;
 }
 
 #slide_img{
-    width: 350px;
-    height: 350px;
+    position: relative;
+    width: 450px;
     border-radius: .5rem;
     overflow: hidden;
+}
+
+#slide_img:hover img{
+    transform: scale(1.2);
+}
+
+.see_Website{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    bottom: -10rem;
+    z-index: 1;
+    font: 1.2rem sans-serif;
+    font-weight: bold;
+    transition: all .5s ease;
+}
+
+.see_Website button{
+    color: var(--main-color);
+    border: 0.2rem solid var(--main-color);
+    padding: 5px 10px;
+    border-radius: .6rem;
+    background: #091924a7;
+    transition: all .5s ease;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.see_Website button:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+}
+
+#slide_img:hover .see_Website{
+    bottom: 0;
 }
 
 .slider-controler{
@@ -37,7 +78,6 @@
     left: 50%;
     transform: translate(-50%);
 }
-
 .swiper-button-next.slider-arrow:after, .swiper-button-prev.slider-arrow:after {
     font-size: 25px;
 }
@@ -58,7 +98,7 @@
     padding: 10px 35px;
     position: absolute;
     bottom: 3rem;
-    left: 1rem;
+    left: 5rem;
     z-index: 1;
     border-radius: .6rem;
     overflow: hidden;
@@ -94,12 +134,7 @@
     transform: translate3d(0,0,0) translate(-50%);
 }
 
-@media (min-width: 1350px) {
-    #slide_img{
-        width: 430px;
-        height: 360px;
-    }
-}
+
 
 @media (max-width: 960px) {
     .portfolio h2{
@@ -107,8 +142,7 @@
     }
 
     #slide_img{
-        width: 300px;
-        height: 300px;
+        width: 350px;
     }
 }
 
@@ -118,8 +152,7 @@
     }
 
     #slide_img{
-        width: 250px;
-        height: 250px;
+        width: 300px;
     }
 }
 
@@ -140,8 +173,7 @@
     }
 
     #slide_img{
-        width: 225px;
-        height: 200px;
+        width: 250px;
     }
     
 }

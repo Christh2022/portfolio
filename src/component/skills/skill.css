@@ -188,6 +188,10 @@
         font-size: 3.4rem;
     }
 
+    .skills-column .title{
+        font-size: 1.9rem;
+    }
+
     .skills-content .progress h3{
         font-size: 1rem;
     }
@@ -199,8 +203,13 @@
 
 @media (max-width: 420px) {
     .skills h2{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
+
+    .skills-column .title{
+        font-size: 1.6rem;
+    }
+    
 
     .skills-content .progress .bar{
         height: 1.55rem;
