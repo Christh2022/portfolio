@@ -32,36 +32,6 @@ function ModalTitle({ text }: { text: string }) {
   );
 }
 
-// ─── Images ───────────────────────────────────────────────────────────────────
-const IMAGES = [
-  "https://assets.codepen.io/215059/photo-1594149221886-eb520f85ad25.jpg",
-  "https://assets.codepen.io/215059/photo-1589156191108-c762ff4b96ab.jpg",
-  "https://assets.codepen.io/215059/photo-1488197047962-b48492212cda.jpg",
-  "https://assets.codepen.io/215059/photo-1469565686301-a0cf06bacf92.jpg",
-  "https://assets.codepen.io/215059/photo-1559827291-72ee739d0d9a.jpg",
-  "https://assets.codepen.io/215059/photo-1459213599465-03ab6a4d5931.jpg",
-  "https://assets.codepen.io/215059/photo-1679540375857-dd5a85bfd3d6.jpg",
-  "https://assets.codepen.io/215059/photo-1444044205806-38f3ed106c10.jpg",
-  "https://assets.codepen.io/215059/photo-1580996554587-5d5cfc78b004.jpg",
-  "https://assets.codepen.io/215059/photo-1488161628813-04466f872be2.jpg",
-  "https://assets.codepen.io/215059/photo-1548783307-f63adc3f200b.jpg",
-  "https://assets.codepen.io/215059/photo-1587653263995-422546a7a569.jpg",
-  "https://assets.codepen.io/215059/photo-1447871622716-5dc761437456.jpg",
-  "https://assets.codepen.io/215059/photo-1693043906043-fc76548579af.jpg",
-  "https://assets.codepen.io/215059/photo-1559827260-dc66d52bef19.jpg",
-  "https://assets.codepen.io/215059/photo-1539125530496-3ca408f9c2d9.jpg",
-  "https://assets.codepen.io/215059/photo-1600679620924-47bf7fcbd629.jpg",
-  "https://assets.codepen.io/215059/photo-1640008404828-3d3cc5a11fd4.jpg",
-  "https://assets.codepen.io/215059/photo-1608965112849-6eb5e5d106b0.jpg",
-  "https://assets.codepen.io/215059/photo-1751460374271-377219ff8336.jpg",
-  "https://assets.codepen.io/215059/photo-1749460396807-b065b6694f02.jpg",
-  "https://assets.codepen.io/215059/photo-1750008172607-d6408ebfc9b5.jpg",
-  "https://assets.codepen.io/215059/photo-1663747638247-f2317493492c.jpg",
-  "https://assets.codepen.io/215059/photo-1523547743064-d0936dbb6ed3.jpg",
-  "https://assets.codepen.io/215059/photo-1660749120048-589827cd6181.jpg",
-  "https://assets.codepen.io/215059/photo-1707161692345-8e4684a77d8c.jpg",
-  "https://assets.codepen.io/215059/photo-1752481444912-6a4c322de10b.jpg",
-];
 
 // ─── Projects ─────────────────────────────────────────────────────────────────
 type ProjectMeta = {
@@ -142,7 +112,7 @@ export default function ProjectsSection({ onBack }: { onBack: () => void }) {
   const rotY           = useRef(0);
   const velY           = useRef(0);
   const drag           = useRef({ active: false, x0: 0, moved: false });
-  const rafRef         = useRef<number>();
+  const rafRef         = useRef<number | null>(null);
   const clickTargetRef = useRef<Item | null>(null);
   const clickedRect    = useRef<DOMRect | null>(null);
   const modalRef       = useRef<HTMLDivElement>(null);
