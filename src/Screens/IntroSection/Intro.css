@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ═══════════════════════════════════════
+   ROOT
+═══════════════════════════════════════ */
+#intro-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: #07070E;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Film-grain overlay */
+#intro-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ═══════════════════════════════════════
+   CURSOR GLOW (spotlight only — no cursor: none)
+═══════════════════════════════════════ */
+.i-cursor-dot {
+  display: none; /* removed: was causing offset clicks */
+}
+
+.i-cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(88, 76, 230, 0.12) 0%, transparent 66%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+/* ═══════════════════════════════════════
+   DECORATIVE GEOMETRY
+═══════════════════════════════════════ */
+.i-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.i-ring-1 {
+  width: 680px;
+  height: 680px;
+  left: -140px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.i-ring-2 {
+  width: 420px;
+  height: 420px;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Ambient color blob */
+.i-ambient {
+  position: absolute;
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(circle, rgba(50, 40, 160, 0.08) 0%, transparent 65%);
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ═══════════════════════════════════════
+   TOP BAR
+═══════════════════════════════════════ */
+.i-topbar {
+  position: absolute;
+  top: clamp(16px, 2.6vw, 40px);
+  left: clamp(20px, 4vw, 60px);
+  right: clamp(20px, 4vw, 60px);
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 0.75vw, 13px);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(6.75px, 0.58vw, 7.5px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.28);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.i-sep {
+  opacity: 0.25;
+}
+
+/* Available badge */
+.i-badge {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: clamp(6px, 0.56vw, 7.5px);
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 12px 5px 9px;
+  border-radius: 100px;
+}
+
+.i-badge-slash {
+  font-size: clamp(6.75px, 0.65vw, 8.25px);
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* ═══════════════════════════════════════
+   VERTICAL SIDE LABEL
+═══════════════════════════════════════ */
+.i-side {
+  position: absolute;
+  right: clamp(-62px, -5.5vw, -32px);
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(5.25px, 0.5vw, 6.75px);
+  letter-spacing: 0.38em;
+  color: rgba(255, 255, 255, 0.09);
+  white-space: nowrap;
+  text-transform: uppercase;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════
+   MAIN BODY
+═══════════════════════════════════════ */
+.i-body {
+  padding: 0 clamp(20px, 4vw, 64px);
+  position: relative;
+  z-index: 1;
+}
+
+/* Name — clip for slide animation */
+.i-name-clip {
+  overflow: hidden;
+  padding-bottom: 0.04em;
+}
+
+.i-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(54px, 16.5vw, 192px);
+  line-height: 0.87;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.04em;
+  display: flex;
+  gap: 0.02em;
+}
+
+.i-letter {
+  display: inline-block;
+  opacity: 0;
+  will-change: opacity;
+  /* Prevent layout jumps during random-char scramble */
+  min-width: 0.58em;
+  text-align: center;
+}
+
+/* Divider line */
+.i-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  margin: clamp(14px, 2vw, 30px) 0 clamp(12px, 1.6vw, 26px);
+  will-change: transform;
+}
+
+/* Subtitle row */
+.i-sub-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.i-sub-clip { overflow: hidden; }
+
+.i-sub {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(6.75px, 0.82vw, 10.5px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin: 0;
+  will-change: transform, opacity;
+}
+
+.i-sub--r {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+/* Tags */
+.i-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(6px, 0.65vw, 11px);
+  margin-top: clamp(18px, 2.2vw, 34px);
+}
+
+.i-tag {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(6px, 0.56vw, 7.5px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.26);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  padding: clamp(5px, 0.45vw, 8px) clamp(10px, 0.95vw, 16px);
+  border-radius: 100px;
+  will-change: transform, opacity;
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.i-tag:hover {
+  color: rgba(255, 255, 255, 0.55);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ═══════════════════════════════════════
+   MARQUEE
+═══════════════════════════════════════ */
+.i-marquee {
+  position: absolute;
+  bottom: clamp(56px, 5.8vw, 94px);
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+  will-change: opacity, transform;
+  -webkit-mask-image: linear-gradient(
+    90deg, transparent 0%, black 8%, black 92%, transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg, transparent 0%, black 8%, black 92%, transparent 100%
+  );
+}
+
+.i-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.i-marquee__item {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(6px, 0.6vw, 7.5px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.16);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-right: 2.5rem;
+}
+
+.i-marquee__dot {
+  margin-left: 2.5rem;
+  opacity: 0.35;
+}
+
+/* ═══════════════════════════════════════
+   ENTER BUTTON
+═══════════════════════════════════════ */
+.i-enter {
+  position: absolute;
+  bottom: clamp(20px, 3vw, 48px);
+  right: clamp(20px, 4vw, 64px);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.52);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(6.75px, 0.65vw, 8.25px);
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding: clamp(10px, 1vw, 17px) clamp(20px, 2.2vw, 36px);
+  border-radius: 100px;
+  cursor: pointer;
+  z-index: 2;
+  will-change: opacity, transform;
+  transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.25s;
+}
+
+.i-enter:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.36);
+  transform: translateY(-2px);
+}

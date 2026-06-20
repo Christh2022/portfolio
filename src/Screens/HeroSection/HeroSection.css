@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800;900&family=Poppins:wght@400;500;600&display=swap');
+
+/* ── Section ── */
+#hero-section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #060608;
+}
+
+
+/* ── Header ── */
+.hs-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.25vw;
+  padding: 0 2.22vw;
+  z-index: 10;
+}
+
+.hs-flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hs-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hs-logo-wrap span:last-child {
+  position: relative;
+  left: 0.90vw;
+}
+
+.hs-header-menu {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.hs-header-menu__item {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.hs-header-menu__item:not(:last-child) {
+  margin-right: 2.57vw;
+}
+
+.hs-header-menu__item:hover { opacity: 0.5; }
+
+/* ── Container ── */
+.hs-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 2.22vw;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Title block ── */
+.hs-title-block {
+  padding-left: 10.28vw;
+  position: relative;
+}
+
+.hs-title-h1 {
+  font-size: 7.34vw;
+  line-height: 6.56vw;
+  font-weight: 900;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+}
+
+.hs-title-row   { display: flex; }
+.hs-charts-cont { display: flex; overflow: hidden; }
+
+/* ── Titre FR ── */
+.hs-fr-row        { display: block; overflow: visible; padding-bottom: 0.06em; line-height: 1; white-space: nowrap; }
+.hs-fr-row--2     { padding-left: 5.76vw; font-size: 0.91em; }
+.hs-fr-ch         { display: inline-block; opacity: 0; }
+.hs-fr-ch--blue   { color: #ffffff; }
+
+.hs-title-row-2 { padding-left: 5.76vw; }
+
+#hc-i     { margin-right: 0.83vw; }  /* I _ TURN */
+#hc-craft { margin-right: 0.83vw; }  /* TURN _ IDEAS */
+#hc-di    { margin-right: 0; }        /* I...DEAS (même mot) */
+#hc-pe    { margin-right: 0.83vw; }  /* INTO _ REALITY */
+
+/* ── Descriptions ── */
+.hs-first-desc {
+  position: absolute;
+  top: -3.47vw;
+  right: 25.69vw;
+  overflow: hidden;
+  display: flex;
+}
+
+.hs-second-desc {
+  position: absolute;
+  bottom: -6.94vw;
+  left: 33.68vw;
+  overflow: hidden;
+  display: flex;
+}
+
+/* ── Typography ── */
+.hs-desc {
+  font-size: 0.83vw;
+  line-height: 0.83vw;
+  font-weight: 500;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.hs-btn {
+  font-size: 0.94vw;
+  line-height: 0.94vw;
+  font-weight: 500;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.hs-btn-2 {
+  font-size: 0.94vw;
+  line-height: 0.94vw;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.hs-header-text {
+  font-size: 0.73vw;
+  line-height: 0.73vw;
+  font-weight: 500;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ── Copyright ── */
+.hs-copyright {
+  position: absolute;
+  bottom: 2.22vw;
+  left: 2.22vw;
+  overflow: hidden;
+  display: flex;
+  z-index: 1;
+}
+
+/* ── Scroll indicator ── */
+.hs-scroll-to {
+  position: absolute;
+  bottom: 2.22vw;
+  left: 53.82vw;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.hs-scroll-to__row {
+  overflow: hidden;
+  display: flex;
+}
+
+/* ── CTA button ── */
+.hs-book-btn {
+  position: absolute;
+  bottom: 2.22vw;
+  right: 2.22vw;
+  width: 11.8vw;
+  height: 11.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.hs-book-btn__circle {
+  width: 11.8vw;
+  height: 11.8vw;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s;
+}
+
+.hs-book-btn:hover .hs-book-btn__circle {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.hs-btn-text {
+  width: 8.89vw;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════ */
+
+/* ── Tablet (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .hs-header          { height: max(6.25vw, 56px); }
+  .hs-title-h1        { font-size: clamp(32px, 7.34vw, 130px); line-height: clamp(29px, 6.56vw, 116px); }
+  .hs-desc            { font-size: max(0.83vw, 11px); line-height: max(0.83vw, 11px); }
+  .hs-btn             { font-size: max(0.94vw, 12px); line-height: max(0.94vw, 12px); }
+  .hs-btn-2           { font-size: max(0.94vw, 12px); line-height: max(0.94vw, 12px); }
+  .hs-header-text     { font-size: max(0.73vw, 11px); line-height: max(0.73vw, 11px); }
+}
+
+/* ── Tablet portrait (≤ 768px) ── */
+@media (max-width: 768px) {
+  .hs-header          { height: 60px; padding: 0 24px; }
+  .hs-title-h1        { font-size: clamp(28px, 8.5vw, 90px); line-height: clamp(25px, 7.5vw, 80px); }
+  .hs-title-block     { padding-left: 6vw; }
+  .hs-title-row-2     { padding-left: 3vw; }
+
+  /* Masquer les éléments décoratifs positionnés absolument */
+  .hs-first-desc,
+  .hs-second-desc     { display: none; }
+
+  /* Textes fixes */
+  .hs-desc            { font-size: 12px; line-height: 12px; }
+  .hs-btn             { font-size: 13px; line-height: 13px; }
+  .hs-btn-2           { font-size: 14px; line-height: 14px; }
+  .hs-header-text     { font-size: 11px; line-height: 11px; }
+
+  /* Réduire espacement menu */
+  .hs-header-menu__item:not(:last-child) { margin-right: 20px; }
+
+  /* Bouton circulaire */
+  .hs-book-btn,
+  .hs-book-btn__circle { width: max(11.8vw, 72px); height: max(11.8vw, 72px); }
+  .hs-btn-text         { width: max(8.89vw, 55px); }
+
+  /* Scroll-to indicator */
+  .hs-scroll-to       { left: 50vw; bottom: 3vw; }
+}
+
+/* ── Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  .hs-header          { height: 52px; padding: 0 16px; }
+  .hs-title-h1        { font-size: clamp(22px, 9.5vw, 60px); line-height: clamp(20px, 8.5vw, 54px); }
+  .hs-title-block     { padding-left: 4vw; }
+  .hs-title-row-2     { padding-left: 2vw; }
+
+  /* Menu visible mais compact */
+  .hs-header-menu__item:not(:last-child) { margin-right: 14px; }
+  .hs-header-text     { font-size: 10px; line-height: 10px; }
+
+  /* Espacements mots du titre */
+  #hc-i               { margin-right: 4px; }
+  #hc-craft           { margin-right: 4px; }
+  #hc-pe              { margin-right: 4px; }
+
+  /* Bouton circulaire adapté */
+  .hs-book-btn,
+  .hs-book-btn__circle { width: 68px; height: 68px; }
+  .hs-btn-text         { width: 52px; }
+
+  /* Repositionner scroll indicator et copyright */
+  .hs-scroll-to       { left: auto; right: 22vw; bottom: 4vw; }
+  .hs-copyright       { bottom: 4vw; }
+}
+
+/* ── Très petit mobile (≤ 360px) ── */
+@media (max-width: 360px) {
+  .hs-title-h1        { font-size: clamp(19px, 9.5vw, 40px); line-height: clamp(17px, 8.5vw, 36px); }
+  .hs-scroll-to       { display: none; }
+}
+
+/* ── Ultra petit (≤ 310px) ── */
+@media (max-width: 310px) {
+  .hs-header-menu     { display: none; }
+}
